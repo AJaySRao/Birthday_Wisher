@@ -9,12 +9,10 @@ now = dt.datetime.now()
 day = now.weekday()
 
 document = "quotes.txt"
-with open(document, 'r') as doc:
-    quotes = [line.strip() for line in doc]
-
-quote = choice(quotes)
-
 if day == 2:
+    with open(document, 'r') as doc:
+        quotes = doc.readlines()
+        quote = choice(quotes)
     with smtplib.SMTP("smtp.mail.yahoo.com") as connection:
         connection.starttls()
         connection.login(user=email, password=password)
@@ -22,4 +20,4 @@ if day == 2:
                             to_addrs="samplgemail9@gmail.com",
                             msg=f"Subject:Wonderful Quote\n\n{quote}")
 
-# print(quotes)
+print(quote)
