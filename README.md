@@ -5,7 +5,7 @@ I decided to use Python to create a automated way of wishing happy birthday.
 
 Now ABW, which is going to send our family or friends a "Happy Birthday" email on their birthday automatically.
 
-Modules: random, smtplib, datetime
+Modules: pandas, random, smtplib, datetime
 Editor: vscode
 
 Steps:
